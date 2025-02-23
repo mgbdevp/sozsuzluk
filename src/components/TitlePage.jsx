@@ -60,8 +60,8 @@ const TitlePage = ({ user }) => {
       if(entry.includes('@gemini')){
         console.log(entry, title);
         generateContent(entry, titleId);
-        location.reload();
       }
+      location.reload();
     } catch (error) {
       setError('error adding entry: ' + error.message);
       setIsSubmitting(false);
