@@ -5,6 +5,7 @@ import { doc, getDoc, setDoc, arrayUnion } from 'firebase/firestore';
 import { onAuthStateChanged } from 'firebase/auth';
 import './TitlePage.css';
 import { addEntry } from '../firebase/operations';
+import { generateContent } from '../geminigenerated';
 
 const TitlePage = ({ user }) => {
   const { titleId } = useParams();
@@ -56,6 +57,9 @@ const TitlePage = ({ user }) => {
     setIsSubmitting(true);
     try {
       await addEntry(titleId, entry, user);
+      if(entry.includes('@gemini')){
+        generateContent(entry, title);
+      }
       location.reload();
     } catch (error) {
       setError('Error adding entry: ' + error.message);
