@@ -23,8 +23,8 @@ const AddEntryPage = ({ user }) => {
       setError('Entry tələb olunur');
       return false;
     }
-    if (title.length < 3) {
-      setError('Başlıq ən az 3 simvol olmalıdır');
+    if (title.length < 2) {
+      setError('Başlıq ən az 2 simvol olmalıdır');
       return false;
     }
     if (entry.length < 2) {
@@ -43,7 +43,9 @@ const AddEntryPage = ({ user }) => {
     setIsSubmitting(true);
     try {
       await addEntry(title, entry, user);
-      generateContent(entry, title);
+      if(entry.includes('@gemini')){
+        generateContent(entry, title);
+      }
       navigate('/');
     } catch (error) {
       setError('Error adding entry: ' + error.message);
@@ -53,6 +55,7 @@ const AddEntryPage = ({ user }) => {
 
   return (
     <div className="add-entry-container">
+      <p>ipucu: @gemini yazaraq gemini-ı oyada bilərsən..</p>
       <form onSubmit={handleSubmit} className="add-entry-form">
         <div className="form-group">
           <label htmlFor="title">Başlıq</label>
