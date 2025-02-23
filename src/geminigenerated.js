@@ -11,7 +11,7 @@ export const generateContent = async (prompt, title) => {
                 {
                     "parts": [
                         {
-                            "text": prompt
+                            "text": 'You are a witty AI who responds with humor and playfulness. Answer the following: ' + prompt
                         }
                     ]
                 }
