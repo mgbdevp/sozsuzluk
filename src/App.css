@@ -1,0 +1,410 @@
+#root {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.add-entry-button {
+  background-color: #333;
+  color: white;
+  border: 2px solid #444;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.dictionary-name img{
+  height: 24px;
+  width: auto;
+}
+
+/* Container styles */
+.container, .title-container, .add-entry-container {
+  background-color: #121212;
+  min-height: 100vh;
+  color: white;
+}
+
+/* Dictionary name */
+.dictionary-name {
+  margin: 0;
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Account name */
+.account-name {
+  font-size: 16px;
+}
+
+/* Login button */
+.login-button {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #357abd;
+}
+
+/* Entry list */
+.entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.entry-title {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.entry-title:hover {
+  background-color: #333;
+}
+
+.entry-count {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Loading and empty states */
+.loading, .no-titles, .not-found {
+  color: #666;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Title page specific */
+.title-name {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.entries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.entry-card {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.entry-content {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.entry-meta {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.entry-author-info {
+  text-align: right;
+}
+
+.entry-author {
+  color: #666;
+  font-size: 14px;
+}
+
+.entry-date {
+  color: #666;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Add entry form */
+.add-entry-form {
+  max-width: 800px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea,
+.entry-input {
+  width: 100%;
+  padding: 10px;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.entry-input:focus {
+  outline: none;
+  border-color: #4285f4;
+}
+
+.entry-input {
+  resize: vertical;
+}
+
+/* Error message */
+.error-message {
+  color: #ff4444;
+  margin-bottom: 20px;
+}
+
+/* Form actions */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+/* Add entry section */
+.add-entry-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Buttons */
+.add-entry-button:hover {
+  background-color: #444;
+}
+
+.submit-button {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #357abd;
+}
+
+.cancel-button {
+  background-color: #333;
+  color: white;
+  border: 1px solid #444;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #444;
+}
+
+.user-profile {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.user-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 6px;
+  border: 2px solid #999;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: white;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.user-joined {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.user-bio {
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.author-link {
+  color: #666;
+  text-decoration: none;
+}
+
+.author-link:hover {
+  color: #4285f4;
+}
+
+
+.bio-edit {
+  margin-top: 20px;
+}
+
+.bio-input {
+  width: 100%;
+  padding: 10px;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.bio-input:focus {
+  outline: none;
+  border-color: #4285f4;
+}
+
+.bio-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.edit-bio-button {
+  background-color: transparent;
+  color: #4285f4;
+  border: 1px solid #4285f4;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.edit-bio-button:hover {
+  background-color: rgba(66, 133, 244, 0.1);
+}
+
+.user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.logout-button {
+  background-color: transparent;
+  color: #ff4444;
+  border: 1px solid #ff4444;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.logout-button:hover {
+  background-color: rgba(255, 68, 68, 0.1);
+}
+
+.user-avatar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.user-avatar-section .logout-button {
+  width: 100%;
+  margin-top: 5px;
+}
+
+@media only screen and (max-width: 700px) {
+  #root{
+    padding: 1rem;
+  }
+}

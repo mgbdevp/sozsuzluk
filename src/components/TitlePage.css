@@ -1,0 +1,148 @@
+.title-container {
+  background-color: #121212;
+  min-height: 100vh;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.dictionary-name {
+  margin: 0;
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+}
+
+.title-name {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.entries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.entry-card {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.entry-content {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.entry-meta {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.entry-author-info {
+  text-align: right;
+}
+
+.entry-author {
+  color: #666;
+  font-size: 14px;
+}
+
+.entry-date {
+  color: #666;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.add-entry-button:hover {
+  background-color: #444;
+}
+
+.loading {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.ai-badge {
+  background-color: #4285f4;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.not-found {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.login-button {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #357abd;
+}
+
+.account-name {
+  font-size: 16px;
+}
+
+.add-entry-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.entry-input {
+  width: 100%;
+  padding: 10px;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.entry-input:focus {
+  outline: none;
+  border-color: #4285f4;
+}
+
+.error-message {
+  color: #ff4444;
+}
+
+.add-entry-button {
+  background-color: #333;
+  color: white;
+  border: 2px solid #444;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.add-entry-button:hover {
+  background-color: #444;
+} 
