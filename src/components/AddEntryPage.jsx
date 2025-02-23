@@ -58,7 +58,7 @@ const AddEntryPage = ({ user }) => {
       <p>ipucu: @gemini yazaraq gemini-ı oyada bilərsən..</p>
       <form onSubmit={handleSubmit} className="add-entry-form">
         <div className="form-group">
-          <label htmlFor="title">Başlıq</label>
+          <label htmlFor="title">başlıq</label>
           <input
             type="text"
             id="title"
@@ -69,7 +69,7 @@ const AddEntryPage = ({ user }) => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="entry">Entry</label>
+          <label htmlFor="entry">entry</label>
           <textarea
             id="entry"
             value={entry}

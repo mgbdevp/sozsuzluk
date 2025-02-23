@@ -58,9 +58,10 @@ const TitlePage = ({ user }) => {
     try {
       await addEntry(titleId, entry, user);
       if(entry.includes('@gemini')){
+        console.log(entry, title);
         generateContent(entry, title);
+        location.reload();
       }
-      location.reload();
     } catch (error) {
       setError('error adding entry: ' + error.message);
       setIsSubmitting(false);

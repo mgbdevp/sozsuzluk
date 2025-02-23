@@ -21,6 +21,7 @@ export const generateContent = async (prompt, title) => {
     .then(response => response.json())
     .then(data => {
         const geminiEntry = data.candidates[0].content.parts[0].text
+        console.warn(geminiEntry);
         addEntry(title, geminiEntry, {displayName: 'gemini-ai'}, true);
     })
     .catch(error => console.error(error));
