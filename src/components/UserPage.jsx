@@ -23,7 +23,7 @@ const UserPage = ({ currentUser }) => {
           setBio(userData.bio || '');
         }
       } catch (error) {
-        console.error('Error fetching user:', error);
+        console.error('error fetching user:', error);
       } finally {
         setLoading(false);
       }
@@ -41,7 +41,7 @@ const UserPage = ({ currentUser }) => {
       setUser(prev => ({ ...prev, bio }));
       setEditing(false);
     } catch (error) {
-      console.error('Error updating bio:', error);
+      console.error('error updating bio:', error);
     } finally {
       setIsSubmitting(false);
     }
@@ -52,16 +52,16 @@ const UserPage = ({ currentUser }) => {
       await signOut(auth);
       navigate('/');
     } catch (error) {
-      console.error('Error signing out:', error);
+      console.error('error signing out:', error);
     }
   };
 
   if (loading) {
-    return <div className="loading">Yüklənir...</div>;
+    return <div className="loading">yüklənir...</div>;
   }
 
   if (!user) {
-    return <div className="not-found">İstifadəçi tapılmadı</div>;
+    return <div className="not-found">istifadəçi tapılmadı</div>;
   }
 
   const isOwnProfile = currentUser?.displayName === userId;
@@ -84,14 +84,14 @@ const UserPage = ({ currentUser }) => {
               className="logout-button"
               onClick={handleLogout}
             >
-              Çıxış
+              çıxış
             </button>
           )}
         </div>
         <div className="user-info">
           <h2 className="user-name">{user.displayName}</h2>
           <div className="user-joined">
-            Qoşuldu: {new Date(user.createdAt).toLocaleDateString()}
+            qoşuldu: {new Date(user.createdAt).toLocaleDateString()}
           </div>
           
           {editing ? (
@@ -99,7 +99,7 @@ const UserPage = ({ currentUser }) => {
               <textarea
                 value={bio}
                 onChange={(e) => setBio(e.target.value)}
-                placeholder="Bio əlavə edin..."
+                placeholder="bio əlavə edin..."
                 rows="3"
                 className="bio-input"
               />
@@ -111,28 +111,28 @@ const UserPage = ({ currentUser }) => {
                     setBio(user.bio || '');
                   }}
                 >
-                  Ləğv et
+                  ləğv et
                 </button>
                 <button 
                   className="submit-button"
                   onClick={handleSaveBio}
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Saxlanılır...' : 'Saxla'}
+                  {isSubmitting ? 'saxlanılır...' : 'saxla'}
                 </button>
               </div>
             </div>
           ) : (
             <div className="bio-section">
               <div className="user-bio">
-                {user.bio || 'Bio əlavə edilməyib'}
+                {user.bio || 'bio əlavə edilməyib'}
               </div>
               {isOwnProfile && (
                 <button 
                   className="edit-bio-button"
                   onClick={() => setEditing(true)}
                 >
-                  Bio redaktə et
+                  bio edit
                 </button>
               )}
             </div>

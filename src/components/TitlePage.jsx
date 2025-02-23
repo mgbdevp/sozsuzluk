@@ -24,7 +24,7 @@ const TitlePage = ({ user }) => {
           setTitle({ id: titleDoc.id, ...titleDoc.data() });
         }
       } catch (error) {
-        console.error('Error fetching title:', error);
+        console.error('error fetching title:', error);
       } finally {
         setLoading(false);
       }
@@ -35,11 +35,11 @@ const TitlePage = ({ user }) => {
 
   const validateEntry = () => {
     if (!entry.trim()) {
-      setError('Entry tələb olunur');
+      setError('entry tələb olunur');
       return false;
     }
     if (entry.length < 2) {
-      setError('Entry ən az 2 simvol olmalıdır');
+      setError('entry ən az 2 simvol olmalıdır'); 
       return false;
     }
     return true;
@@ -47,7 +47,7 @@ const TitlePage = ({ user }) => {
 
   const handleAddEntry = async () => {
     if (!user) {
-      alert('Zəhmət olmasa əvvəlcə daxil olun');
+      alert('zəhmət olmasa əvvəlcə daxil olun');
       return;
     }
 
@@ -62,7 +62,7 @@ const TitlePage = ({ user }) => {
       }
       location.reload();
     } catch (error) {
-      setError('Error adding entry: ' + error.message);
+      setError('error adding entry: ' + error.message);
       setIsSubmitting(false);
     }
   };
@@ -70,9 +70,9 @@ const TitlePage = ({ user }) => {
   return (
     <div className="title-container">
       {loading ? (
-        <div className="loading">Yüklənir...</div>
+        <div className="loading">yüklənir...</div>
       ) : !title ? (
-        <div className="not-found">Başlıq tapılmadı</div>
+        <div className="not-found">başlıq tapılmadı</div>
       ) : (
         <>
           <h2 className="title-name">{title.name}</h2>
@@ -103,7 +103,7 @@ const TitlePage = ({ user }) => {
             <textarea
               value={entry}
               onChange={(e) => setEntry(e.target.value)}
-              placeholder="Entry daxil edin"
+              placeholder="entry daxil edin"
               rows="4"
               className="entry-input"
             />
@@ -113,7 +113,7 @@ const TitlePage = ({ user }) => {
               onClick={handleAddEntry}
               disabled={isSubmitting}
             >
-              {isSubmitting ? 'Əlavə edilir...' : 'entry əlavə et'}
+              {isSubmitting ? 'əlavə edilir...' : 'entry əlavə et'}
             </button>
           </div>
         </>

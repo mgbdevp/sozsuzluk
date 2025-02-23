@@ -47,12 +47,12 @@ const MainPage = ({ user }) => {
   return (
     <div className="container">
       <button className="add-entry-button" onClick={handleAddEntry}>
-        entry əlavə et
+        qaralamaca
       </button>
       
       <div className="entry-list">
         {loading ? (
-          <div className="loading">Başlıqlar yüklənir...</div>
+          <div className="loading">başlıqlar yüklənir...</div>
         ) : titles.length > 0 ? (
           titles.map(title => (
             <Link 
@@ -64,7 +64,7 @@ const MainPage = ({ user }) => {
             </Link>
           ))
         ) : (
-          <div className="no-titles">Başlıq tapılmadı</div>
+          <div className="no-titles">başlıq tapılmadı</div>
         )}
       </div>
     </div>

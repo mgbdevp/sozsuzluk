@@ -64,7 +64,7 @@ const AddEntryPage = ({ user }) => {
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            placeholder="Başlıq daxil edin"
+            placeholder="başlıq daxil edin"
           />
         </div>
 
@@ -74,7 +74,7 @@ const AddEntryPage = ({ user }) => {
             id="entry"
             value={entry}
             onChange={(e) => setEntry(e.target.value)}
-            placeholder="Entry daxil edin"
+            placeholder="entry daxil edin"
             rows="6"
           />
         </div>
@@ -83,14 +83,14 @@ const AddEntryPage = ({ user }) => {
 
         <div className="form-actions">
           <button type="button" onClick={() => navigate('/')} className="cancel-button">
-            Ləğv et
+            ləğv et
           </button>
           <button 
             type="submit" 
             className="submit-button"
             disabled={isSubmitting}
           >
-            {isSubmitting ? 'Əlavə edilir...' : 'Əlavə et'}
+            {isSubmitting ? 'əlavə edilir...' : 'əlavə et'}
           </button>
         </div>
       </form>
