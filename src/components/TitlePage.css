@@ -146,3 +146,8 @@
 .add-entry-button:hover {
   background-color: #444;
 } 
+
+
+.entry-content{
+  color: #ccc;
+}
