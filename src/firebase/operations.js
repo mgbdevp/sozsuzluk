@@ -17,7 +17,7 @@ export const addEntry = async (title, entry, user, isAI = false) => {
     // Create new title document with first entry
     await setDoc(titleRef, {
       name: title.toLowerCase(),
-      createdAt: new Date(),
+      createdAt: Date.now(),
       createdBy: user.displayName,
       entries: [newEntry]
     });

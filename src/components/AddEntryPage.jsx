@@ -45,8 +45,9 @@ const AddEntryPage = ({ user }) => {
       await addEntry(title, entry, user);
       if(entry.includes('@gemini')){
         generateContent(entry, title);
+        setTimeout(() => navigate('/title/'+title), 1500);
       }
-      navigate('/');
+      else navigate('/title/'+title);
     } catch (error) {
       setError('Error adding entry: ' + error.message);
       setIsSubmitting(false);
